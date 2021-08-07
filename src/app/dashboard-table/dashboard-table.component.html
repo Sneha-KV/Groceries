@@ -1,0 +1,76 @@
+
+<div class="wrapper">
+  <div class="short-list-buttons">
+    <button (click)="getFlaggedList()" class="short-list">{{buttonMessage}}</button>
+ 
+    <button *ngIf="isShortListVisible" (click) = "resetList()">{{clearList}}</button>
+    <button class="filter" (click)="showFilters()">{{filterMessage}}</button>
+  </div>
+  <!-- <h3>Filter List</h3> -->
+  <div class="filter-section hide" id="filter-section" >
+
+    <ng-container  *ngFor="let column of columnsToDisplay">
+   
+      <label for="{{column}}"></label> 
+     <select name="{{column}}_filter" id="{{column}}_filter" #d (change) = "filterTable($event, column,d.value)"  *ngIf="filterData">
+       <option value="default"> {{column}}</option>
+       <option *ngFor="let item of filterData[column]"  [value]="item">{{item}}</option>
+     </select>
+    </ng-container>
+    <button class="button clear_filter" (click)="resetFilter(true)">Reset</button>
+  </div>
+ 
+
+  <table mat-table *ngIf="dataSource.data.length"
+         [dataSource]="dataSource" multiTemplateDataRows
+         class="mat-elevation-z8 dashboard-table" >
+         <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+           <ng-container *ngIf="column!= 'applied'">
+            <th mat-header-cell *matHeaderCellDef  > 
+              <button class="sortHeader asc" (click) = "sortColumn($event, column)" >{{column}}</button>  
+            </th>
+           </ng-container>
+           <ng-container #elseBlock>
+            <th mat-header-cell *matHeaderCellDef  > 
+              <!-- {{column}}  -->
+              <button class="sortHeader" (click) = "sortDate($event, column)" >{{column}}</button>
+            </th>
+           </ng-container>
+         
+           
+           <td mat-cell *matCellDef="let element" class="{{column}}"> {{element[column]}} </td>
+         </ng-container>
+         <!-- expanded section -->
+         <ng-container matColumnDef="expandedDetail">
+           <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+             
+             <div class="applicant-detail"
+                  [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+               <div class="applicant-diagram">
+                <div class="addInfo">
+                  <app-additional-info [info]= "element"></app-additional-info>
+                  <button  class="flag-applicant item_{{element.id}}" (click)="flagApplicant($event, element, true)">{{shortListText}}</button>
+                  <button  class="remove-applicant item_{{element.id}}" (click)="flagApplicant($event, element, false)">Remove</button>
+                </div>
+               </div>
+             
+             </div>
+           </td>
+         </ng-container>
+      
+         <!-- Rows -->
+         <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+         <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+             class="applicant-row item_{{element.id}}"
+             [class.example-expanded-row]="expandedElement === element"
+             (click)="expandedElement = expandedElement === element ? null : element">
+         </tr>
+         <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+  </table>
+  <div *ngIf="dataSource.data.length == 0">
+    No records found
+
+  </div>
+</div>
+
+<!-- Table End -->

@@ -1,0 +1,48 @@
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.applicant-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.applicant-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.applicant-row td {
+  border-bottom-width: 0;
+  text-align: center;
+}
+.applicant-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.applicant-diagram {
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+}
+
+.applicant-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.applicant-description {
+  padding: 16px;
+}
+
+.applicant-description-attribution {
+  opacity: 0.5;
+}
+
+.flag_row {
+  background: rgb(7, 3, 54, 0.2);
+}

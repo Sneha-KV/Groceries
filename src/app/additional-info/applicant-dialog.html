@@ -1,0 +1,42 @@
+
+<div class="details-modal">
+    <h1>
+        Item Details
+    </h1>
+    <div class="applicant-position">Id: {{data.id}} </div>
+    <p>
+        Name: <span class="applicant-symbol details"> <h2>{{data.name}}</h2> </span>
+    </p>
+    <p>
+        Price:<span class="applicant-name details"> {{data.price}} </span>
+    </p>
+    <p>
+        Available Aisle: <span class="applicant-weight details"> {{data.aisle}} </span>
+    </p>
+    <p>
+        Category: <span class="applicant-weight details">{{data.category}}</span>
+    </p>
+   
+    Types of {{data.name}}:
+    <ng-container class="questions" *ngFor="let type of data.types">
+        <ul>
+            <li>
+                <span>
+                    <p>{{type}}</p>
+                </span>
+            </li>
+        </ul>
+    </ng-container>
+    Brands available:
+    <ng-container class="brands" *ngFor="let type of data.brands">
+        <ul>
+            <li>
+                <span>
+                    <p>{{type}}</p>
+                </span>
+            </li>
+        </ul>
+    </ng-container>
+                     
+   
+</div>

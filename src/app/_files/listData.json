@@ -1,0 +1,103 @@
+[
+        {
+            "id": 1,
+            "name": "Milk",
+            "price": "2.20",
+            "aisle": 2,
+            "category": "Dairy Products",
+            "brands": ["Kroger", "Good Milk", "Tempura"],
+            "types": ["Whole Milk", "2% skimmed Milk"],
+            "quantity": "1 gallon"
+        },
+        {
+            "id": 2,
+            "name": "Nut Milk",
+            "price": "2.59",
+            "aisle": 2,
+            "category": "Nut Products",
+            "brands": ["Kroger", "Good Milk", "Tempura"],
+            "types": ["Almond Milk", "Cashew Milk", "Oat Milk"],
+            "quantity": "1 gallon"
+        },
+        {
+            "id": 3,
+            "name": "Tomatoes",
+            "price": "1.49",
+            "aisle": 4,
+            "category": "Produce",
+            "brands": ["Kroger", "Farmers Market", "Target"],
+            "types": ["Roma", "Organic", "On the Vine"],
+            "quantity": "1 lb"
+        },
+        {
+            "id": 4,
+            "name": "Cilantro",
+            "price": "0.79",
+            "aisle": 4,
+            "category": "Produce-herbs",
+            "brands": ["Kroger", "Farmers Market", "Target"],
+            "types": ["Organic", "Regular"],
+            "quantity": "1 bunch"
+        },
+        {
+            "id": 5,
+            "name": "Basic",
+            "price": "0.99",
+            "aisle": 4,
+            "category": "Produce-herbs",
+            "brands": ["Kroger", "Farmers Market", "Target"],
+            "types": ["Organic", "Regular"],
+            "quantity": "1 bunch"
+        },
+        {
+            "id": 6,
+            "name": "Butter",
+            "price": "3.25",
+            "aisle": 2,
+            "category": "Dairy Products",
+            "brands": ["Kroger", "Good Milk", "Target"],
+            "types": ["Spreaddable", "Salted", "Unsalted"],
+            "quantity": "16 oz"
+        },
+        {
+            "id": 7,
+            "name": "American Cheese",
+            "price": "4.55",
+            "aisle": 2,
+            "category": "Dairy Products",
+            "brands": ["Kroger", "Mainstays", "Target"],
+            "types": ["Shredded", "Sliced"],
+            "quantity": "16 oz"
+        },
+        {
+            "id": 8,
+            "name": "Mozarella Cheese",
+            "price": "4.70",
+            "aisle": 2,
+            "category": "Dairy Products",
+            "brands": ["Kroger", "Farmers Market", "Target"],
+            "types": ["Shredded", "Block"],
+            "quantity": "16 oz"
+        },
+        {
+            "id": 9,
+            "name": "Green Beans",
+            "price": "2.39",
+            "aisle": 4,
+            "category": "Produce",
+            "brands": ["Kroger", "Farmers Market", "Great Value"],
+            "types": ["Organic", "Regular"],
+            "quantity": "1 lb"
+        },
+        {
+            "id": 10,
+            "name": "Cabbage",
+            "price": "2.00",
+            "aisle": 4,
+            "category": "Produce",
+            "brands": ["Kroger", "Farmers Market", "Great Value"],
+            "types": ["Organic", "Chopped", "Regular"],
+            "quantity": "1 pound"
+        }
+    
+]
