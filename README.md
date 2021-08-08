@@ -1,4 +1,5 @@
-# MyApp
+# MyApp- Groceries List
+Application hosted on firebase - https://grocerylist-8e5b4.web.app/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
